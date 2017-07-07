@@ -1,0 +1,40 @@
+# Reading C:/intelFPGA_lite/17.0/modelsim_ase/tcl/vsim/pref.tcl
+# do led_7seg_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/Georgantas/Documents/fpga4fun/led_displays {C:/Users/Georgantas/Documents/fpga4fun/led_displays/led_7seg.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:28:07 on Jul 06,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Georgantas/Documents/fpga4fun/led_displays" C:/Users/Georgantas/Documents/fpga4fun/led_displays/led_7seg.v 
+# -- Compiling module led_7seg
+# 
+# Top level modules:
+# 	led_7seg
+# End time: 20:28:07 on Jul 06,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.led_7seg
+# vsim work.led_7seg 
+# Start time: 20:28:10 on Jul 06,2017
+# Loading work.led_7seg
+add wave -position insertpoint  \
+sim:/led_7seg/clk \
+sim:/led_7seg/value \
+sim:/led_7seg/counter
+force -freeze sim:/led_7seg/clk 1 0, 0 {50 ps} -r 100
+run
+run
+run
+run
+run
+run
+# End time: 20:53:25 on Jul 06,2017, Elapsed time: 0:25:15
+# Errors: 0, Warnings: 0

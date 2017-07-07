@@ -1,0 +1,71 @@
+|music
+clk => speaker~reg0.CLK
+clk => counter_octave[0].CLK
+clk => counter_octave[1].CLK
+clk => counter_octave[2].CLK
+clk => counter_octave[3].CLK
+clk => counter_octave[4].CLK
+clk => counter_octave[5].CLK
+clk => counter_octave[6].CLK
+clk => counter_octave[7].CLK
+clk => counter_note[0].CLK
+clk => counter_note[1].CLK
+clk => counter_note[2].CLK
+clk => counter_note[3].CLK
+clk => counter_note[4].CLK
+clk => counter_note[5].CLK
+clk => counter_note[6].CLK
+clk => counter_note[7].CLK
+clk => counter_note[8].CLK
+clk => tone[0].CLK
+clk => tone[1].CLK
+clk => tone[2].CLK
+clk => tone[3].CLK
+clk => tone[4].CLK
+clk => tone[5].CLK
+clk => tone[6].CLK
+clk => tone[7].CLK
+clk => tone[8].CLK
+clk => tone[9].CLK
+clk => tone[10].CLK
+clk => tone[11].CLK
+clk => tone[12].CLK
+clk => tone[13].CLK
+clk => tone[14].CLK
+clk => tone[15].CLK
+clk => tone[16].CLK
+clk => tone[17].CLK
+clk => tone[18].CLK
+clk => tone[19].CLK
+clk => tone[20].CLK
+clk => tone[21].CLK
+clk => tone[22].CLK
+clk => tone[23].CLK
+clk => tone[24].CLK
+clk => tone[25].CLK
+clk => tone[26].CLK
+clk => tone[27].CLK
+speaker <= speaker~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|music|divide_by12:divby12
+numer[0] => remain[0].DATAIN
+numer[1] => remain[1].DATAIN
+numer[2] => Decoder2.IN3
+numer[3] => Decoder1.IN2
+numer[3] => Decoder2.IN2
+numer[4] => Decoder0.IN1
+numer[4] => Decoder1.IN1
+numer[4] => Decoder2.IN1
+numer[5] => Decoder0.IN0
+numer[5] => Decoder1.IN0
+numer[5] => Decoder2.IN0
+quotient[0] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+quotient[1] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+quotient[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+remain[0] <= numer[0].DB_MAX_OUTPUT_PORT_TYPE
+remain[1] <= numer[1].DB_MAX_OUTPUT_PORT_TYPE
+remain[2] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+remain[3] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+
+
